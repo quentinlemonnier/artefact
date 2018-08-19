@@ -1,0 +1,187 @@
+/*html, body {
+    font-family: "Open Sans", sans-serif;
+    height: 100%;
+    margin:0px;
+	margin-bottom: 30px;
+}*/
+
+.condensed {
+    font-family: "Avenir LT Std", sans-serif;
+}
+
+#header { height: 30px; display: block; overflow: hidden; background-color: #F2F2F2; position: fixed; bottom:0px; left:0px; right:0px; z-index: 10001; }
+#header h1, #header h2, #header p, #header a { line-height: 30px; vertical-align: middle; margin: 0; padding: 0; }
+#header h1 { text-transform: uppercase; }
+#header ul { height: 30px; width: 100%; }
+#header ul li { display: inline-block; list-style: none; float: left; line-height: 30px; vertical-align: middle; margin-left:1em; }
+#header ul li:first-of-type { margin:0; }
+#header ul li.left { margin-left:0.5em; }
+
+#progressbar { height:3px; min-width: 10px; }
+
+table.middle {
+    border-collapse: collapse;
+    min-height: 400px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+table.middle tr { border: none; text-align: center; vertical-align: middle; }
+table.middle td { width: 50%; vertical-align: middle; }
+
+.colorBg1 { 
+
+background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 50%, rgba(36,39,27,0.2) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(36,39,27,0.2))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 50%,rgba(36,39,27,0.2) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 50%,rgba(36,39,27,0.2) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 50%,rgba(36,39,27,0.2) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 50%,rgba(36,39,27,0.2) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3324271b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.colorBg2 {
+    background-color: #D42000;
+}
+
+section.artistes, section.mouvements { width: 50%; float:left; }
+section.mouvements { /*padding-left: 10%; width: 40%;*/ }
+section.mouvements article { display: none; }
+section.artistes article { display:none; }
+
+/* TIMELINE */
+/*nav { display: block;
+      clear: both;
+      width: 100%;
+        height:6em;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-bottom: 
+}
+nav ul li { float:left; list-style: none;  }
+nav ul { width: 4700px; }*/
+
+article {
+    margin-left: 4em; 
+    margin-bottom: 0.5em; 
+}
+
+section.artistes article { 
+    border-left: 3px dotted #24271B;
+}
+    section.artistes article img { width: 100%; }
+article > h1 { display:inline-block;border-bottom: 3px solid #24271B; }
+
+article > h2.date { float:right; display: inline-block; }
+
+footer {
+    height:3px;
+    position:fixed;
+    z-index: 1001;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+nav#artistes { display: 
+    block;
+    width:100%;
+    text-align: center;
+}
+.circle {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+    line-height: 200px;
+    vertical-align: middle;
+    text-align: center;
+    color:#FFF;
+	/* width and height can be anything, as long as they're equal */
+    opacity: 1;
+        margin-left:-1em;
+}
+.circle span { line-height:1.2; }
+
+/* TIMELINE ARTISTES */
+section.artistes { cursor: pointer; }
+.artistes .circle { float:right; margin-right:-100px; }
+.containercircle { display: block; height: 200px;}
+.containercircle li { float: left; display: inline-block; list-style: none; line-height: 200px; vertical-align: middle; }
+.containercircle li:first-of-type { font-size: x-large; }
+.containercircle li:last-of-type { float:right; }
+
+/* TIMELINE MOUVEMENTS */
+
+
+/* POPUP */
+    /*.popClose { color:#f44336; text-decoration: none; border:2px solid #f44336; padding: 0.2em 0.4em; font-size: small; position: fixed; right:2em; top:2em; display: inline-block; z-index: auto;}
+        .popClose:hover { background-color:#f44336; color:#FFF; }*/
+
+/* POPUP MOUVEMENT */
+#popMouvement {
+    display: none;
+    background-color:#4C4C4C;
+    position:fixed;
+    z-index:1;
+    left:50%;
+    right:0px;
+    top:0px;
+    bottom:40px;
+    text-align: center;
+    color:#FFF;
+    padding: 1em 2em;
+}
+
+    #popMouvement .header { padding: 0.2em; margin:-1em -2em 2em -2em; height: 200px; /*background: url('../images/mouvements/bauhaus002.jpg') no-repeat top center; background-size: cover;*/ background-color: #CAD65A; }
+    #popMouvement .artistes {}
+    #popMouvement .artistes li { list-style: none; display: inline-block; margin-right: 0.5em; margin-top: 2em; }
+    #popMouvement .artistes li a { padding: 0.2em 0.4em; border:2px solid #FFF; text-decoration: none;color: #FFF; }
+        #popMouvement .artistes li a:hover{ background-color:#FFF; color:#000; }
+
+    #popMouvement .work h3 { font-weight: 300 !important; }
+
+/* POPUP ARISTES */
+#popArtiste {
+    display: none;
+    background-color:#212121;
+    position:fixed;
+    z-index:2;
+    left:240px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    text-align: center;
+    color:#FFF;
+    padding: 1em 4em;
+    overflow-y: auto;
+    border-left: 4px solid #f44336;
+}
+    #popArtiste h5 { margin-bottom: 0.10em; }
+    #popArtiste h6 { margin-bottom: none; }
+    #popArtiste table { width:100%; height: 100%; }
+    #popArtiste table tr td { width: 50%; height: 100%; vertical-align: middle; text-align: center !important; }
+
+    #popArtiste .circle {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        color:#FFF;
+        margin-left: -100px;
+        opacity:1;
+        position:relative;
+        z-index:3;
+        background-color: #F2F2F2;
+    }
+        #popArtiste img {
+            margin-left: 0px !important;
+        }
+        #popArtiste .oeuvre { max-width: 400px; position:relative; z-index:2; }
+        /*#popArtiste .source,*/ #popArtiste .chronologie { padding: 0.2em 0.4em; border:2px solid #f44336; text-decoration: none;color: #f44336; margin-top: 1em;
+        }
+        
+        #popArtiste .source:hover, #popArtiste .chronologie:hover{ background-color:#f44336; color:#FFF; }
+        #popArtiste .chronologie {
+            margin: 0.5em; }
+

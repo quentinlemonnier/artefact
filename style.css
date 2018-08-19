@@ -1,0 +1,154 @@
+/*
+Theme Name: Artefact
+Theme URI: http://quentinlemonnier.fr
+Author: Quentin Lemonnier
+Author URI: https://quentinlemonnier.fr
+Description: Arbor.js WP THEME
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: clear
+Text Domain: Artefact
+*/
+
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Repeatable Patterns
+ * 3.0 - Basic Structure
+ * 4.0 - Header
+ *   4.1 - Site Header
+ *   4.2 - Navigation
+ * 5.0 - Content
+ *   5.1 - Entry Header
+ *   5.2 - Entry Meta
+ *   5.3 - Entry Content
+ *   5.4 - Galleries
+ *   5.5 - Post Formats
+ *   5.6 - Attachments
+ *   5.7 - Post/Paging Navigation
+ *   5.8 - Author Bio
+ *   5.9 - Archives
+ *   5.10 - Search Results/No posts
+ *   5.11 - 404
+ *   5.12 - Comments
+ *   5.13 - Multisite
+ * 6.0 - Sidebar
+ *   6.1 - Widgets
+ * 7.0 - Footer
+ * 8.0 - Media Queries
+ * 9.0 - Print
+ * ----------------------------------------------------------------------------
+ */
+
+.container { max-width: 900px; }
+
+html { position: relative; min-height: 100%; }
+body { padding: 0px 0px 0px 0px; font-size: 14px; font-family: "Avenir LT Std", sans-serif; }
+
+footer {   position: absolute;
+  bottom: 0;
+  /*width: 100%;*/
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  left: 240px;
+  right: 0px;
+  line-height: 60px;
+  background: #EEEEEE;
+  vertical-align: middle;
+  overflow: hidden;
+  text-align: center;
+}
+header > .sidebar { position: fixed; top: 0px; bottom:0px; left: 0px; width: 240px; background: #272727; color:#FFF; height: 100%; }
+.sidebar { text-align: center; padding: 2em 1em; transition: 0.2s; }
+.sidebar.sidebar-min { width: 40px; }
+
+.wrap { margin: 0px; padding: 0px; text-align: left; min-height: 100%; padding-left: 240px; padding-bottom: 40px; }
+.wrap.wrap-large { padding-left: 40px; }
+
+/*
+ * Gird
+ */
+#page { height: auto; overflow: hidden; }
+
+/*
+ * TYPO
+ */
+h1, h2, h3, h4, h5 h6 {
+    font-family: "Avenir LT Std", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+}
+h1 { font-size: 4em; }
+h2 { font-size: 2.4em; }
+h3 { font-size: 1.8em; }
+
+h1 > span { opacity: 0.92130; }
+    
+}
+
+a { color: #f44336; text-decoration: none; }
+a:hover {  /*color: #f44336;*/ text-decoration: underline; }
+
+/*
+ * sidelink
+ */
+ul.sidelink { padding: 0px; margin: 2em 0px 0px 0px; }
+ul.sidelink li { list-style: none; border-bottom: 1px solid #424242; display: block; width: 100%; }
+ul.sidelink li:first-of-type {  border-top: 1px solid #424242; }
+
+ul.sidelink li > a { color: #f44336; line-height: 3; vertical-align: midddle; font-weight: bold; display: block; }
+ul.sidelink li > a:hover { color:#FFF; background: #f44336; }
+
+/*
+ * article
+ */
+.entry-footer { display: none; }
+
+.artist-statcard {
+    height:360px;
+    line-height: 360px;
+    background-size:cover;margin-bottom:2em;
+    position: relative;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.artist-statcard > header { display: inline-block; vertical-align: middle; text-align: center; }
+
+.artist-statcard .artist-content {
+    display: none;
+    top: 100%;
+}
+.artist-statcard .artist-content h2 { line-height: 1; margin: 1em; display: inline-block; }
+.artist-statcard .artist-content p { vertical-align: middle; display: inline-block; line-height: 1.1; margin: 1em; }
+
+.artist-statcard:hover .artist-content {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,0.8);
+    color: #FFF;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.page-title {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);*/
+}
+
+/*
+ * MATERIALIZE
+ */
+.card-content .chip { margin-top: 0.25em; margin-bottom: 0.25em; }
+.card-title { font-weight: 600; }
