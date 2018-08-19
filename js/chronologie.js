@@ -65,6 +65,7 @@ function getArtistes(url){
 
               jQuery( "<section/>", {
                 "class": "artistes",
+                "id" : "artistes-list", 
                 html: items
               }).appendTo( "body" );
         }
@@ -144,6 +145,7 @@ function getMouvements(url){
             delete dataMouvementId;
               jQuery( "<section/>", {
                 "class": "mouvements",
+                "id" : "mouvement-list",
                 html: items
               }).appendTo( "body" );
         }
@@ -164,4 +166,28 @@ function scrollArtiste(nom,alpha){
     }
     jQuery("body").animate({scrollTop: jQuery('#'+nom).offset().top-300}, 3000,'easeInOutCubic');
     return false;
+}
+
+function isDomChronoReady(){
+    var artistesEl = document.getElementById("artistes-list");
+    var mouvementsEl = document.getElementById("mouvement-list");
+    //console.warn("LOADING"+ artistesEl +"#"+ mouvementsEl);
+    if(artistesEl != null  && mouvementsEl != null){            
+            jQuery("#viewport").attr("height",jQuery(window).height());
+            jQuery("#viewport").attr("width",jQuery(".col-md-12").width());
+            
+            sys.screen();
+            sys.screenPadding(20, 40, 20, 40);
+            sys.renderer = Renderer("#viewport");
+            sys.screenSize(jQuery("col-md-12").width, jQuery(window).height)
+            
+            // CLIQUE CANVAS
+            var canvas = "#viewport";
+        
+            // Loader
+            jQuery("#chronoBtn").removeClass("loading");
+        
+    }else{
+     setTimeout(function(){ isDomChronoReady() },500);   
+    }
 }

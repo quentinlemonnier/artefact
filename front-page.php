@@ -17,8 +17,8 @@
 					<?php endif;
 	?>
     </h1>
-  <div class="fixed-action-btn horizontal" style="top: 45px; right: 24px; height:56px; z-index:0;">
-    <a class="btn-floating btn-large red">
+  <div class="fixed-action-btn horizontal" style="top: 45px; right: 24px; height:56px; z-index:0;" >
+    <a class="btn-floating btn-large red loading" id="chronoBtn">
       <i class="large material-icons">widgets</i>
     </a>
     <ul>
@@ -69,17 +69,8 @@ jQuery(document).ready(function(){
     
     getArtistes( '<?php echo esc_url( home_url( '/' ) ); ?>json_a/artist/' );
     getMouvements( '<?php echo esc_url( home_url( '/' ) ); ?>json_m/movement/' );
-    
-            jQuery("#viewport").attr("height",jQuery(window).height());
-            jQuery("#viewport").attr("width",jQuery(".col-md-12").width());
+    isDomChronoReady();
             
-            sys.screen();
-            sys.screenPadding(20, 40, 20, 40);
-            sys.renderer = Renderer("#viewport");
-            sys.screenSize(jQuery("col-md-12").width, jQuery(window).height)
-            
-            // CLIQUE CANVAS
-            var canvas = "#viewport";
     
     /*var c=document.getElementById("viewport");
     var ctx_style=c.getContext("2d");

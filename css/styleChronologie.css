@@ -185,3 +185,14 @@ section.artistes { cursor: pointer; }
         #popArtiste .chronologie {
             margin: 0.5em; }
 
+@keyframes chronoLoading {
+    from {transform: scale(.6);}
+    to{transform: scale(1);}
+}
+#chronoBtn, #chronoBtn i {
+    transition-duration: .8s;
+}
+#chronoBtn.loading {
+    animation: .8s chronoLoading infinite;
+}
+#chronoBtn.loading i { opacity: 0; }
